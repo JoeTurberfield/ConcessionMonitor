@@ -42,15 +42,15 @@ namespace ConcessionMonitor
                         // Send to product groups by machine type.
                         if(machType == "VCN430A/530C" || machType == "VTC530C/760C")
                         {
-                            message.CC.Add("tperrin@mazak.co.uk");
+                            message.CC.Add("VCN430A@mazak.co.uk");
                         }
                         if (machType == "QT200/250" || machType == "QT300/350")
                         {
-                            message.CC.Add("jmoffat@mazak.co.uk");
+                            message.CC.Add("QT200@mazak.co.uk");
                         }
                         if (machType == "VTC800")
                         {
-                            message.CC.Add("rwellings@mazak.co.uk");
+                            message.CC.Add("VTC800@mazak.co.uk");
                         }
 
                         message.Subject += "Engineering";
@@ -60,14 +60,14 @@ namespace ConcessionMonitor
                     case 1:
                         //message.CC.Add("jturberfield@mazak.co.uk");
                         message.Subject = "Quality";
-                        message.CC.Add("cbills@mazak.co.uk");
+                        message.CC.Add("Quality@mazak.co.uk");
                         break;
 
                     //step 2 complete, send email to director
                     case 2:
                         //message.CC.Add("jturberfield@mazak.co.uk");
                         message.Subject = "Director";
-                        message.CC.Add("sastley@mazak.co.uk");
+                        message.CC.Add("Director@mazak.co.uk");
                         break;
 
                     //step 3 complete and concession rejected, send to machining
@@ -121,89 +121,67 @@ namespace ConcessionMonitor
                 case "Quality":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;                 
-                    message.CC.Add("cbills@mazak.co.uk");
-                    message.CC.Add("ghodgkins@mazak.co.uk");
-                    message.CC.Add("gbarnes@mazak.co.uk");
+                    message.CC.Add("Quality@mazak.co.uk");
                     break;
                 case "QT Lathe Group":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("dsimkin@mazak.co.uk");
-                    message.CC.Add("jmoffat@mazak.co.uk");
+                    message.CC.Add("QT@mazak.co.uk");
                     break;
                 case "VTC/VCN Commodity Group":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("atame@mazak.co.uk");
-                    message.CC.Add("tperrin@mazak.co.uk");
-                    message.CC.Add("alee@mazak.co.uk");
+                    message.CC.Add("VTC/VCN@mazak.co.uk");
                     break;
                 case "VTC800 Group":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("atame@mazak.co.uk");
-                    message.CC.Add("rwellings@mazak.co.uk");
-                    message.CC.Add("alee@mazak.co.uk");
+                    message.CC.Add("VTC800@mazak.co.uk");
                     break;
                 case "Logistics":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("kbuckley@mazak.co.uk");
-                    message.CC.Add("lwillems@mazak.co.uk");
+                    message.CC.Add("Logistics@mazak.co.uk");
                     break;
                 case "EDM":
                     message.Subject = section;
                     message.CC.Add("jturberfield@mazak.co.uk");                 
-                    message.CC.Add("kbuckley@mazak.co.uk");
-                    message.CC.Add("whenley@mazak.co.uk");
+                    message.CC.Add("EDM@mazak.co.uk");
                     break;
                 case "Machining":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("schapman@mazak.co.uk");
-                    message.CC.Add("dastley@mazak.co.uk");
-                    message.CC.Add("pjohnstone@mazak.co.uk");
-                    message.CC.Add("jmurphy@mazak.co.uk");
-                    message.CC.Add("mjacobs@mazak.co.uk");
+                    message.CC.Add("Machining@mazak.co.uk");
                     break;
                 case "SMD":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("wprice@mazak.co.uk");
-                    message.CC.Add("mscott@mazak.co.uk");
-                    message.CC.Add("nperry@mazak.co.uk");
-                    message.CC.Add("awatkins@mazak.co.uk");
+                    message.CC.Add("SMD@mazak.co.uk");
                     break;
                 case "Purchasing":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("medwards@mazak.co.uk");
-                    message.CC.Add("plawrence@mazak.co.uk");
+                    message.CC.Add("Purchasing@mazak.co.uk");
                     break;
                 case "General Assembly":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("ebrzezicki@mazak.co.uk");
-                    message.CC.Add("rhayes@mazak.co.uk");
+                    message.CC.Add("GeneralAssembly@mazak.co.uk");
                     break;
                 case "Elec/Modular/Unit":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("rlorenzosmith@mazak.co.uk");
-                    message.CC.Add("rhayes@mazak.co.uk");
+                    message.CC.Add("ElecModularUnit@mazak.co.uk");
                     break;
                 case "Powder Line":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("wprice@mazak.co.uk");
-                    message.CC.Add("cgrubb@mazak.co.uk");
+                    message.CC.Add("Powder@mazak.co.uk");
                     break;
                 case "Shipping":
                     //message.CC.Add("jturberfield@mazak.co.uk");
                     message.Subject = section;
-                    message.CC.Add("cbills@mazak.co.uk");
-                    message.CC.Add("ghodgkins@mazak.co.uk");
-                    message.CC.Add("bbryant@mazak.co.uk");
+                    message.CC.Add("Shipping@mazak.co.uk");
                     break;
             }
            
